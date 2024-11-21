@@ -6,9 +6,23 @@
 
     <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
     <script type="text/jsx">
+
+      function Header({title}){
+        return(<h1>{title}</h1>);
+      }
+
+      function HomePage(){
+        return(
+          <div>
+            <Header title="ReactJS"/>
+            <Header title="NextJS"/>
+          </div>
+        );
+      }
+
       const domNode = document.getElementById('app');
       const root = ReactDOM.createRoot(domNode);
-      root.render(<h1>Develop. Preview. Ship.</h1>);
+      root.render(<HomePage />);
 
     </script>
   </body>
